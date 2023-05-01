@@ -300,12 +300,11 @@ img {
 
 .footer-form {
   display: flex;
-  margin-left: 80px;
+  align-items: center;
 }
 
 .footer-option {
-  display: flex;
-  flex-direction: column;
+  margin-left: 80px;
 }
 
 .form-text {
@@ -349,7 +348,6 @@ img {
   width: 165px;
   height: 40px;
   margin-left: 24px;
-  margin-top: auto;
   border-radius: 4px;
   padding: 8px 24px;
   align-items: center;
@@ -741,10 +739,13 @@ img {
 }
 
 .modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 408px;
-  height: 576px;
-  padding: 24px;
-  margin: 0 auto;
+  padding: 72px 24px 24px 24px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -753,7 +754,11 @@ img {
 }
 
 .modal-btn {
+  position: absolute;
   display: flex;
+
+  right: 24px;
+  top: 24px;
   justify-content: center;
   align-items: center;
   width: 24px;
@@ -787,9 +792,7 @@ img {
 }
 
 .modal-title {
-  margin-top: 24px;
   margin-bottom: 16px;
-
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -803,13 +806,10 @@ img {
 }
 
 .modal-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
-}
-
-.input-cover {
-  position: relative;
 }
 
 .modal-lable {
@@ -823,6 +823,13 @@ img {
   color: var(--customers-icon);
 }
 
+.area-cover {
+  margin-bottom: 16px;
+}
+.area-cover . .modal-lable {
+  margin: 0;
+}
+
 .modal-input {
   height: 40px;
   width: 100%;
@@ -833,6 +840,13 @@ img {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  position: absolute;
+  top: 70%;
+  left: 16px;
+  transform: translateY(-61%);
 }
 
 .modal-input:focus {
@@ -881,23 +895,19 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.16;
   letter-spacing: 0.04em;
   color: var(--acsent-color);
 }
 
-.form-icon {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-}
-
 .privacy-lable {
   display: flex;
-
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 24px;
+}
+
+.privacy-lable .modal-lable {
+  margin: 0;
 }
 
 .send-btn {
@@ -940,6 +950,7 @@ img {
 .chek-icon {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1px solid var(--acsent-background-color);
   border-radius: 2px;
   fill: #fcfcfc;
